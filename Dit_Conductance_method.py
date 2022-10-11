@@ -218,7 +218,7 @@ class Ditextract:
 
         for G_p_voltage in G_p_w_allvoltage:
             G_p_w_max.append(max(G_p_voltage)) #Get max conductance value at each voltage point
-            Freq_at_max_G_p_w.append(freqvalues_omega[G_p_voltage.index(max(G_p_voltage))]) #Get frequency at which the max G/omega occurs
+            Freq_at_max_G_p_w.append(self.omegavalues[G_p_voltage.index(max(G_p_voltage))]) #Get frequency at which the max G/omega occurs
         
             
         
@@ -238,7 +238,7 @@ class Ditextract:
     
     def returnfromdirectory(self):
         'Returns filepath back to original directory after in preparation for next class to be used with different directory'
-       os.chdir('../..')
+        os.chdir('../..')
             
             
     def fitforVfb(self, InvCvalues):
